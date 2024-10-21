@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
-    internal class LongestSubstringWithoutRepeatingCharacters : TestSolution
+    internal class LongestSubstringWithoutRepeatingCharacters : ISolutionClass
     {
         public static int Solution(string s)
         {
@@ -30,7 +30,7 @@
             return answer;
         }
 
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(Solution("abcabcbb"));
             Console.WriteLine(Solution("bbbbb"));

@@ -4,7 +4,7 @@ using System.Text;
 namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/longest-palindromic-substring/description/
-    internal class LongestPalindromicSubstring : TestSolution
+    internal class LongestPalindromicSubstring : ISolutionClass
     {
         public static string Solution(string s)
         {
@@ -48,7 +48,7 @@ namespace LeetCodeDemos.Problems
             return stringBuilder.ToString();
         }
 
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(Solution("babad"));
             Console.WriteLine(Solution("cbbd"));

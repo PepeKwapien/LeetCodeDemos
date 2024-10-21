@@ -2,7 +2,7 @@
 namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/reverse-integer/description/
-    internal class ReverseInteger : TestSolution
+    internal class ReverseInteger : ISolutionClass
     {
         public static int Solution(int x)
         {
@@ -26,7 +26,7 @@ namespace LeetCodeDemos.Problems
 
             return (int)result;
         }
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(Solution(123));
             Console.WriteLine(Solution(-123));

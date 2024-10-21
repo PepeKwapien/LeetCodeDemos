@@ -2,7 +2,7 @@
 namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/regular-expression-matching/description/
-    internal class RegularExpressionMatching : TestSolution
+    internal class RegularExpressionMatching : ISolutionClass
     {
         private static Dictionary<string, bool> _regularExpressionMAtchingStartAndDotResults = [];
 
@@ -115,7 +115,7 @@ namespace LeetCodeDemos.Problems
             }
 
         }
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(RegularExpressionMatchingStartAndDot("abc", "abc"));
             Console.WriteLine(RegularExpressionMatchingStartAndDot("abc", "a.c"));

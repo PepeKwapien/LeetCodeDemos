@@ -28,7 +28,7 @@
         }
     }
 
-    internal class AddTwoNumbers : TestSolution
+    internal class AddTwoNumbers : ISolutionClass
     {
         public static ListNode Solution(ListNode l1, ListNode l2)
         {
@@ -49,7 +49,7 @@
             return new ListNode(currentValue, nextNode);
         }
 
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(Solution(new ListNode([2, 4, 3]), new ListNode([5, 6, 4])));
             Console.WriteLine(Solution(new ListNode([0]), new ListNode([0])));

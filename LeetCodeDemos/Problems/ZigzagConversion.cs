@@ -5,7 +5,7 @@ using System.Text;
 namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/zigzag-conversion/description/
-    internal class ZigzagConversion : TestSolution
+    internal class ZigzagConversion : ISolutionClass
     {
         public static string Solution(string s, int numRows)
         {
@@ -34,7 +34,7 @@ namespace LeetCodeDemos.Problems
             return stringBuilder.ToString();
         }
 
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(Solution("PAYPALISHIRING", 2));
             Console.WriteLine(Solution("PAYPALISHIRING", 3));

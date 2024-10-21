@@ -2,7 +2,7 @@
 namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/median-of-two-sorted-arrays/description/
-    internal class MedianOfTwoSortedArrays : TestSolution
+    internal class MedianOfTwoSortedArrays : ISolutionClass
     {
         public static double FirstSolution(int[] nums1, int[] nums2)
         {
@@ -121,7 +121,7 @@ namespace LeetCodeDemos.Problems
 
         } // end of FindMedianSortedArraysBinarySearch
 
-        public void TestSolution()
+        public static void TestSolution()
         {
             Console.WriteLine(FirstSolution([1, 3], [2]));
             Console.WriteLine(SolutionWithBinarySearch([1, 3], [2]));
