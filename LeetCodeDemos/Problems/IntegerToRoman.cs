@@ -8,7 +8,7 @@ namespace LeetCodeDemos.Problems
     {
         private static void GreedyIntegerToRoman(ref int num, int treshhold, ref StringBuilder result, string romanEquivalent)
         {
-            while(num >= treshhold)
+            while (num >= treshhold)
             {
                 result.Append(romanEquivalent);
                 num -= treshhold;
