@@ -7,7 +7,7 @@ namespace LeetCodeDemos
     {
         static void Main(string[] args)
         {
-            LongestCommonPrefix.TestSolution();
+            ThreeSum.TestSolution();
         }
     }
 }
