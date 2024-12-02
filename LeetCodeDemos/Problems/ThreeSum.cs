@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-using System.Text.Json.Nodes;
 
 namespace LeetCodeDemos.Problems
 {
@@ -51,43 +50,44 @@ namespace LeetCodeDemos.Problems
 
             for (int i = 0; i < nums.Length - 2; i++)
             {
+                if (nums[i] > 0)
+                {
+                    break;
+                }
+
                 if (i > 0 && nums[i - 1] == nums[i])
                 {
                     continue;
                 }
 
                 int j = i + 1, k = nums.Length - 1;
-                var usedNumbers = new HashSet<int>();
-
                 while (j < k)
                 {
-                    if (usedNumbers.Contains(nums[j]))
+                    int sum = nums[i] + nums[j] + nums[k];
+
+                    if (sum == 0)
                     {
+                        solutions.Add(new List<int> { nums[i], nums[j], nums[k] });
+                        k--;
                         j++;
+
+                        while (j < k && nums[j - 1] == nums[j])
+                        {
+                            j++;
+                        }
                     }
-                    else if (usedNumbers.Contains(nums[k]))
+                    else if (sum > 0)
                     {
                         k--;
                     }
-                    else if (nums[j] + nums[i] + nums[k] == 0)
-                    {
-                        solutions.Add([nums[j], nums[i], nums[k]]);
-                        usedNumbers.Add(nums[j]);
-                        usedNumbers.Add(nums[k]);
-                        j++;
-                    }
-                    else if (nums[j] + nums[i] + nums[k] > 0)
-                    {
-                        k--;
-                    }
-                    else if (nums[j] + nums[i] + nums[k] < 0)
+                    else
                     {
                         j++;
                     }
                 }
             }
 
-            return solutions;
+                return solutions;
         }
 
         public static void TestSolution()

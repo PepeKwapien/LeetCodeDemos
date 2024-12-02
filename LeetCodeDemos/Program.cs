@@ -7,7 +7,7 @@ namespace LeetCodeDemos
     {
         static void Main(string[] args)
         {
-            ThreeSum.TestSolution();
+            ThreeSumClosest.TestSolution();
         }
     }
 }
