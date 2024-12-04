@@ -1,4 +1,6 @@
-﻿namespace LeetCodeDemos.Problems
+﻿using System.Text;
+
+namespace LeetCodeDemos.Problems
 {
     // https://leetcode.com/problems/add-two-numbers/description/
     public class ListNode
@@ -17,14 +19,32 @@
             {
                 val = list[index];
             }
+
             if (index + 1 < list.Length)
             {
-                next = new ListNode(list, index++);
+                next = new ListNode(list, ++index);
             }
             else
             {
                 next = null;
             }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder str = new StringBuilder($"[{val}");
+
+            var next = this.next;
+
+            while ( next != null )
+            {
+                str.Append($" ,{next.val}");
+                next = next.next;
+            }
+
+            str.Append("]");
+
+            return str.ToString();
         }
     }
 
