@@ -7,7 +7,7 @@ namespace LeetCodeDemos
     {
         static void Main(string[] args)
         {
-            RemoveNthNodeFromEndOfList.TestSolution();
+            ValidParentheses.TestSolution();
         }
     }
 }
