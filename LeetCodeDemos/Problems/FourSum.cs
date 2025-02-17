@@ -5,7 +5,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/4sum/description/
     internal class FourSum : ISolutionClass
     {
-        public static IList<IList<int>> Solution(int[] nums, int target)
+        public IList<IList<int>> Solution(int[] nums, int target)
         {
             if (nums.Length < 4)
             {
@@ -75,7 +75,7 @@ namespace LeetCodeDemos.Problems
 
             return solution;
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
             //Console.WriteLine(JsonSerializer.Serialize(Solution([1, 0, -1, 0, -2, 2], 0)));
             //Console.WriteLine(JsonSerializer.Serialize(Solution([2, 2, 2, 2, 2], 8)));

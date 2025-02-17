@@ -6,7 +6,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/integer-to-roman/description/
     internal class IntegerToRoman : ISolutionClass
     {
-        private static void GreedyIntegerToRoman(ref int num, int treshhold, ref StringBuilder result, string romanEquivalent)
+        private void GreedyIntegerToRoman(ref int num, int treshhold, ref StringBuilder result, string romanEquivalent)
         {
             while (num >= treshhold)
             {
@@ -15,7 +15,7 @@ namespace LeetCodeDemos.Problems
             }
         }
 
-        public static string Solution(int num)
+        public string Solution(int num)
         {
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -38,7 +38,7 @@ namespace LeetCodeDemos.Problems
 
             return stringBuilder.ToString();
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution(3749));
             Console.WriteLine(Solution(58));

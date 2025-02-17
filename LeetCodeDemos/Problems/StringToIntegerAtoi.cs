@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/string-to-integer-atoi/description/
     internal class StringToIntegerAtoi : ISolutionClass
     {
-        public static int Solution(string s)
+        public int Solution(string s)
         {
             s = s.Trim();
             int sign = 1;
@@ -52,7 +52,7 @@ namespace LeetCodeDemos.Problems
 
             return (int)result;
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution("42"));
             Console.WriteLine(Solution("   -042"));

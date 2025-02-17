@@ -3,7 +3,7 @@
     // https://leetcode.com/problems/valid-parentheses/description/
     internal class ValidParentheses : ISolutionClass
     {
-        public static bool Solution(string s)
+        public bool Solution(string s)
         {
             Stack<char> parentheses = new Stack<char>();
 
@@ -30,14 +30,14 @@
                 }
             }
 
-            if(parentheses.Count != 0)
+            if (parentheses.Count != 0)
             {
                 return false;
             }
 
             return true;
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution("()"));
             Console.WriteLine(Solution("()[]{}"));

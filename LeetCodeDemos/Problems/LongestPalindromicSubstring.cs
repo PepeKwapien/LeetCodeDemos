@@ -6,7 +6,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/longest-palindromic-substring/description/
     internal class LongestPalindromicSubstring : ISolutionClass
     {
-        public static string Solution(string s)
+        public string Solution(string s)
         {
             string output = "";
 
@@ -24,7 +24,7 @@ namespace LeetCodeDemos.Problems
             return output;
         }
 
-        private static string ExpandPalindrome(string s, int index, bool isIndexBetweenCharacters)
+        private string ExpandPalindrome(string s, int index, bool isIndexBetweenCharacters)
         {
             int left = index;
             int right = isIndexBetweenCharacters ? index + 1 : index;
@@ -48,7 +48,7 @@ namespace LeetCodeDemos.Problems
             return stringBuilder.ToString();
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution("babad"));
             Console.WriteLine(Solution("cbbd"));
@@ -56,7 +56,7 @@ namespace LeetCodeDemos.Problems
             Console.WriteLine(Solution("aacabdkacaa"));
             Console.WriteLine(Solution("babaddtattarrattatddetartrateedredividerb"));
             Console.WriteLine(Solution("kobylamamalybok"));
-             
+
         }
     }
 }

@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/container-with-most-water/description/
     internal class ContainerWithMostWater : ISolutionClass
     {
-        public static int Solution(int[] height)
+        public int Solution(int[] height)
         {
             int left = 0, right = height.Length - 1;
             int result = 0;
@@ -30,7 +30,7 @@ namespace LeetCodeDemos.Problems
             return result;
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution([1, 8, 6, 2, 5, 4, 8, 3, 7]));
             Console.WriteLine(Solution([1, 1]));

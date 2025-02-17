@@ -5,7 +5,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/3sum/description/
     internal class ThreeSum : ISolutionClass
     {
-        public static IList<IList<int>> Solution1(int[] nums)
+        public IList<IList<int>> Solution1(int[] nums)
         {
             Array.Sort(nums);
             IList<IList<int>> solutions = new List<IList<int>>();
@@ -43,7 +43,7 @@ namespace LeetCodeDemos.Problems
             return solutions;
         }
 
-        public static IList<IList<int>> Solution(int[] nums)
+        public IList<IList<int>> Solution(int[] nums)
         {
             Array.Sort(nums);
             IList<IList<int>> solutions = new List<IList<int>>();
@@ -87,10 +87,10 @@ namespace LeetCodeDemos.Problems
                 }
             }
 
-                return solutions;
+            return solutions;
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(JsonSerializer.Serialize(Solution([-1, 0, 1, 2, -1, -4])));
             Console.WriteLine(JsonSerializer.Serialize(Solution([0, 0, 0, 0])));

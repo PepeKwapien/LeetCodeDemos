@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/reverse-integer/description/
     internal class ReverseInteger : ISolutionClass
     {
-        public static int Solution(int x)
+        public int Solution(int x)
         {
             long result = 0;
             long moduloDivider = 10;
@@ -26,8 +26,9 @@ namespace LeetCodeDemos.Problems
 
             return (int)result;
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
+            Console.WriteLine(Solution(129));
             Console.WriteLine(Solution(123));
             Console.WriteLine(Solution(-123));
             Console.WriteLine(Solution(120));

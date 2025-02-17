@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/two-sum/
     internal class TwoSum : ISolutionClass
     {
-        public static int[] Solution(int[] nums, int target)
+        public int[] Solution(int[] nums, int target)
         {
             Dictionary<int, int> dictionary = new Dictionary<int, int>();
             for (int i = 0; i < nums.Length; i++)
@@ -20,7 +20,7 @@ namespace LeetCodeDemos.Problems
             return [-1, -1];
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution([2, 7, 11, 15], 9));
             Console.WriteLine(Solution([3, 2, 4], 6));

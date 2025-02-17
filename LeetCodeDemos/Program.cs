@@ -7,7 +7,8 @@ namespace LeetCodeDemos
     {
         static void Main(string[] args)
         {
-            ValidParentheses.TestSolution();
+            ISolutionClass solutionClass = new GenerateParentheses();
+            solutionClass.TestSolution();
         }
     }
 }

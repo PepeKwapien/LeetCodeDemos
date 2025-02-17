@@ -3,6 +3,6 @@ namespace LeetCodeDemos
 {
     internal interface ISolutionClass
     {
-        static abstract void TestSolution();
+        abstract void TestSolution();
     }
 }

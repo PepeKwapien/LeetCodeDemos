@@ -6,17 +6,17 @@ namespace LeetCodeDemos.Problems
     // This beat 100% people btw
     internal class RomanToInteger : ISolutionClass
     {
-        public static Dictionary<char, int> RomanDictionary = new Dictionary<char, int>() {
+        public Dictionary<char, int> RomanDictionary = new Dictionary<char, int>() {
             { 'M', 1000 }, { 'D', 500 },
             { 'C', 100 }, { 'L', 50 },
             { 'X', 10 }, { 'V', 5 },
             { 'I', 1 }
         };
-        public static int RomanToInt(string s)
+        public int RomanToInt(string s)
         {
             int result = 0;
             int previousNumber = 0;
-            foreach(char c in s)
+            foreach (char c in s)
             {
                 int currentNumber = RomanDictionary[c];
 
@@ -35,7 +35,7 @@ namespace LeetCodeDemos.Problems
             return result;
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(RomanToInt("III"));
             Console.WriteLine(RomanToInt("LVIII"));

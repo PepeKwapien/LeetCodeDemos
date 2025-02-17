@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/median-of-two-sorted-arrays/description/
     internal class MedianOfTwoSortedArrays : ISolutionClass
     {
-        public static double FirstSolution(int[] nums1, int[] nums2)
+        public double FirstSolution(int[] nums1, int[] nums2)
         {
             int totalLength = nums1.Length + nums2.Length;
             int firstMedianIndex = (int)Math.Ceiling(((double)totalLength / 2)) - 1;
@@ -59,7 +59,7 @@ namespace LeetCodeDemos.Problems
             return ((double)(firstMedianPart! + (double)secondMedianPart) / 2);
         }
 
-        public static double SolutionWithBinarySearch(int[] nums1, int[] nums2)
+        public double SolutionWithBinarySearch(int[] nums1, int[] nums2)
         {
             if (nums1.Length > nums2.Length)
             {
@@ -121,12 +121,12 @@ namespace LeetCodeDemos.Problems
 
         } // end of FindMedianSortedArraysBinarySearch
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(FirstSolution([1, 3], [2]));
             Console.WriteLine(SolutionWithBinarySearch([1, 3], [2]));
             Console.WriteLine(FirstSolution([1, 2], [3, 4]));
-            Console.WriteLine(SolutionWithBinarySearch([1,2], [3,4]));
+            Console.WriteLine(SolutionWithBinarySearch([1, 2], [3, 4]));
         }
     }
 }

@@ -4,15 +4,15 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/regular-expression-matching/description/
     internal class RegularExpressionMatching : ISolutionClass
     {
-        private static Dictionary<string, bool> _regularExpressionMAtchingStartAndDotResults = [];
+        private Dictionary<string, bool> _regularExpressionMAtchingStartAndDotResults = [];
 
-        public static bool RegularExpressionMatchingStartAndDot(string s, string p)
+        public bool RegularExpressionMatchingStartAndDot(string s, string p)
         {
             _regularExpressionMAtchingStartAndDotResults = [];
             return RegularExpressionRecursion(s, p, 0, 0);
         }
 
-        private static bool RegularExpressionRecursion(string s, string p, int indexS, int indexP)
+        private bool RegularExpressionRecursion(string s, string p, int indexS, int indexP)
         {
             if (indexP >= p.Length)
             {
@@ -115,7 +115,7 @@ namespace LeetCodeDemos.Problems
             }
 
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(RegularExpressionMatchingStartAndDot("abc", "abc"));
             Console.WriteLine(RegularExpressionMatchingStartAndDot("abc", "a.c"));

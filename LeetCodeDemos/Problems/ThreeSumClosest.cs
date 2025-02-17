@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/3sum-closest/description/
     internal class ThreeSumClosest : ISolutionClass
     {
-        public static int Solution1(int[] nums, int target)
+        public int Solution1(int[] nums, int target)
         {
             Array.Sort(nums);
 
@@ -62,7 +62,7 @@ namespace LeetCodeDemos.Problems
 
             return solution;
         }
-        public static int Solution(int[] nums, int target)
+        public int Solution(int[] nums, int target)
         {
             Array.Sort(nums);
 
@@ -84,7 +84,7 @@ namespace LeetCodeDemos.Problems
 
                     if (sum > target)
                     {
-                        if (distance > sum -  target)
+                        if (distance > sum - target)
                         {
                             solution = sum;
                             distance = sum - target;
@@ -106,8 +106,8 @@ namespace LeetCodeDemos.Problems
                         {
                             j++;
                         }
-                        while (j < k && nums[j-1] == nums[j]);
-                        
+                        while (j < k && nums[j - 1] == nums[j]);
+
                     }
                     else
                     {
@@ -119,7 +119,7 @@ namespace LeetCodeDemos.Problems
             return solution;
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution([-1, 2, 1, -4], 1));
             Console.WriteLine(Solution([0, 0, 0], 1));

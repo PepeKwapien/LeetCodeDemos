@@ -3,7 +3,7 @@
     // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
     internal class LongestSubstringWithoutRepeatingCharacters : ISolutionClass
     {
-        public static int Solution(string s)
+        public int Solution(string s)
         {
             int answer = 0;
 
@@ -30,7 +30,7 @@
             return answer;
         }
 
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution("abcabcbb"));
             Console.WriteLine(Solution("bbbbb"));

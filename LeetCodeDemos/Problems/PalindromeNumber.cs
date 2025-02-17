@@ -4,7 +4,7 @@ namespace LeetCodeDemos.Problems
     // https://leetcode.com/problems/palindrome-number/description/
     internal class PalindromeNumber : ISolutionClass
     {
-        public static bool Solution(int x)
+        public bool Solution(int x)
         {
             if (x < 0)
             {
@@ -26,7 +26,7 @@ namespace LeetCodeDemos.Problems
 
             return x - revertedNumber == 0;
         }
-        public static void TestSolution()
+        public void TestSolution()
         {
             Console.WriteLine(Solution(121));
             Console.WriteLine(Solution(-121));
