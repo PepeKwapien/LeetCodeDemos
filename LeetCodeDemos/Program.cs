@@ -7,7 +7,7 @@ namespace LeetCodeDemos
     {
         static void Main(string[] args)
         {
-            ISolutionClass solutionClass = new FindConcatenatedSubstring();
+            ISolutionClass solutionClass = new NextPermuation();
             solutionClass.TestSolution();
         }
     }
